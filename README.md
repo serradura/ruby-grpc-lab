@@ -1,28 +1,24 @@
 # Snip
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/snip`. To experiment with that code, run `bin/console` for an interactive prompt.
+My lab to implement a micro-service using [gRPC](https://grpc.io/) to shorten urls.
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'snip'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install snip
+![gif](http://g.recordit.co/YpxGgT7gYa.gif)
 
 ## Usage
 
-TODO: Write usage instructions here
+First, start up the micro-service.
+```sh
+bundle exec ruby -I lib ./bin/server
+```
+
+Second, make calls to the service using it client.
+```sh
+bundle exec ruby -I lib ./bin/client http://www.google.com
+
+# When call without arguments
+# the client will use http://example.com by default.
+bundle exec ruby -I lib ./bin/client
+```
 
 ## Development
 
