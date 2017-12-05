@@ -26,6 +26,7 @@ GEM
       google-protobuf (~> 3.1)
       googleapis-common-protos-types (~> 1.0.0)
       googleauth (>= 0.5.1, < 0.7)
+    grpc-tools (1.7.2)
     jwt (2.1.0)
     little-plugger (1.1.4)
     logging (2.2.2)
@@ -49,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
+  grpc-tools (~> 1.7)
   minitest (~> 5.0)
   rake (~> 10.0)
   snip!
