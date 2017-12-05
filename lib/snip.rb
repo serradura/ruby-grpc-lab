@@ -1,5 +1,8 @@
-require "snip/version"
+require 'grpc'
+
+require 'snip_services_pb'
 
 module Snip
-  # Your code goes here...
 end
+
+require 'snip/version'
