@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require_relative 'func'
+require 'snip'
+
+grpc_adress = Func::GRPCAddress.(Snip::GRPC_ADDRESS)
+
+insecure_port = Func::IsInsecure.(ARGV[0])
+
+Snip::Server.new(grpc_adress.(ARGV[1]), insecure_port).call

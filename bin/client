@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require_relative 'func'
+require 'snip'
+
+url = ARGV[0]
+
+grpc_adress = Func::GRPCAddress.(Snip::GRPC_ADDRESS)
+
+insecure_channel = Func::IsInsecure.(ARGV[1])
+
+Snip::Client.new(grpc_adress.(ARGV[2]), insecure_channel).(url)
