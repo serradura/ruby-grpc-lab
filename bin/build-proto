@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+cmd = 'grpc_tools_ruby_protoc -Iproto --ruby_out=../lib --grpc_out=../lib'
+
+Dir['../proto/*'].each do |proto|
+  system("#{cmd} #{proto}")
+end
